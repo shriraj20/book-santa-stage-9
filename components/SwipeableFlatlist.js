@@ -12,6 +12,14 @@ import { ListItem, Icon } from "react-native-elements";
 import { SwipeListView } from "react-native-swipe-list-view";
 
 import db from "../config";
+import EasingNode from "react-native-reanimated"
+import {
+  Easing as OldEasing,
+  // @ts-ignore
+  // EasingNode,
+} from 'react-native-reanimated';
+
+const Easing = EasingNode || OldEasing;
 
 export default class SwipeableFlatlist extends Component {
   constructor(props) {
